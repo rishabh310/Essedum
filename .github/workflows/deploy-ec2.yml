@@ -54,6 +54,20 @@ jobs:
             echo "User: $(whoami)"
             echo "Directory: ${HOME}/${{ env.APP_NAME }}"
             
+            # Install Git if not present
+            if ! command -v git &> /dev/null; then
+              echo "📥 Installing Git..."
+              sudo yum install -y git || sudo apt-get install -y git
+              echo "✅ Git installed"
+            fi
+            
+            # Install Python 3.11 if not present
+            if ! command -v python3.11 &> /dev/null; then
+              echo "🐍 Installing Python 3.11..."
+              sudo yum install -y python3.11 python3.11-pip || sudo apt-get install -y python3.11 python3.11-venv
+              echo "✅ Python 3.11 installed"
+            fi
+            
             # Check if app directory exists, if not create and clone
             if [ ! -d "${HOME}/${{ env.APP_NAME }}" ]; then
               echo "📁 Creating app directory..."
