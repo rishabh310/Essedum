@@ -190,16 +190,3 @@ jobs:
           echo "- Health: http://${{ secrets.EC2_HOST }}:8080/health" >> $GITHUB_STEP_SUMMARY
           echo "- API Docs: http://${{ secrets.EC2_HOST }}:8080/docs" >> $GITHUB_STEP_SUMMARY
           echo "- Query: POST http://${{ secrets.EC2_HOST }}:8080/query" >> $GITHUB_STEP_SUMMARY
-        run: |
-          sleep 5
-          curl -f http://${{ secrets.EC2_HOST }}:8080/health || exit 1
-          echo "✅ Health check passed!"
-      
-      - name: Deployment notification
-        if: always()
-        run: |
-          if [ ${{ job.status }} == 'success' ]; then
-            echo "🎉 Deployment to EC2 completed successfully!"
-          else
-            echo "❌ Deployment to EC2 failed!"
-          fi
