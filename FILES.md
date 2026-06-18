@@ -38,7 +38,7 @@ c:\ESSEDUM\Github Actions\Essedum\
 
 ---
 
-## 📄 File Descriptions
+## 📄 File Description
 
 ### Workflow Files
 
