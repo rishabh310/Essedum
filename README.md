@@ -1,6 +1,6 @@
 # Langflow to Python ADK Conversion
 
-Production-ready Python implementation of the Langflow workflow design (LEOAZR_M74854_M74854.json).
+Production-ready Python implementations of the Langflow workflow design (LEOAZR_M74854_M74854.json).
 
 ## Overview
 
