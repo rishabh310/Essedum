@@ -1,6 +1,6 @@
 # ADK CI/CD Pipeline - File Inventory
 
-## 📁 Complete File Structure
+## 📁 Complete File Structures
 
 ```
 c:\ESSEDUM\Github Actions\Essedum\
